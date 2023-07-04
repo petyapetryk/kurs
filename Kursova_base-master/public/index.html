@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bg.css">
+    <link rel="stylesheet" href="buttons.css">
+    <link rel="stylesheet" href="menu.css">
+    <link rel="stylesheet" href="modal.css">
+    <link rel="stylesheet" href="workmenu.css">
+    <link rel="stylesheet" href="item.css">
+    <title>Мережеві комутатори</title>
+</head>
+<body>
+<form name="productForm" action="/products" method="POST" id="modalform" enctype="multipart/form-data">
+    <div class="conteinar" id="modalcont">
+        <div class="head">
+            <p class="text-h">
+               Створити комутатор
+            </p>
+            <div class="btn-grid">
+                <input type="submit" value="X" id="btn-close" onclick="event.preventDefault(); Modaleclose()">
+            </div>
+        </div>
+        <div class="center">
+            <input type="hidden" name="productId" id="productId">
+                <input type="hidden" name="oldCloudinaryPublicId" id="oldCloudinaryPublicId">
+                <input type="hidden" name="oldImagePath" id="oldImagePath">
+            <p class="text-p">
+                Назва комутатора:
+            </p>
+            <input class="text-field" id="js-input-model" maxlength="50" name="productName" placeholder="Введіть назву комутатора" type="text">
+            <p class="text-p">
+                Кількість портів Gigabit Ethernet:
+            </p>
+            <input class="text-field" id="js-proc" maxlength="30" name="productPortsGE" placeholder="Введіть кількість портів Gigabit Ethernet" type="text">
+            <p class="text-p">
+                Кількість портів SFP:
+            </p>
+            <input class="text-field" id="js-op"  name="productPortsSFP" placeholder="Введіть кількість портів SFP" type="text">
+            <p class="text-p">
+                Можливість монтажу в стійку:
+            </p>
+            <select name="productMontage" id="js-lan" class="select-t">
+                <option value="Так">Так</option>
+                <option value="Ні">Ні</option>
+
+            </select>
+            <p class="text-p">
+                Тип:
+            </p>
+            <select name="productType" id="js-disk" class="select-t">
+                <option value="Некерований">Некерований</option>
+                <option value="Керований L2">Керований L2</option>
+                <option value="Керований L3(L2+)">Керований L3(L2+)</option>
+            </select>
+            <p class="text-p" style="padding-bottom: 10px;">
+                Виберіть файл зображення:
+            </p>
+            <input class="file" name="productImage" type="file" id="productImage" accept=".jpeg, .jpg, .png">
+            <button type="submit" id="submitBtn" onclick="modalpush(); event.preventDefault();" value="Confirm" class="buttonedit">Confirm</button>
+        </div>
+    </div>
+</form>
+<div class="grey" onclick="Modaleclose();" id="greybg"></div>
+    <div class="menu">
+        <div class="nameshop">
+            <b>Network Switches</b>
+        </div>
+                <div class="search"><input type="search" class="searchfield" placeholder="Шукати комутатор"/></div>
+                <div class="green"><button class="green-button">Шукати</button></div>
+    </div>
+    <div class="workmenu">
+        <div class="Manage-nas"><b>Керування комутаторами</b></div>
+        <div>
+            <button type="submit" class="create-button" onclick="Modaleshow()">Створити</button>
+        </div>
+        <div class="switch-elements">
+            <div class="sort-text">
+
+                <b>Сортувати по кількості портів</b>
+            </div>
+            <div>
+                <div class="switch-div">
+            <label class="switch">
+                <input type="checkbox" id="sortcheckbox">
+                <span class="slider round"></span>
+            </label>
+        </div>
+    </div>
+    </div>
+    </div>
+    <div class="dataContainer">
+    </div>
+     <script src="buttons.js"></script>
+     <script src="valid.js"></script>
+     <script src="forminput.js"></script>
+</body>
+</html>

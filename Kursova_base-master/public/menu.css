@@ -1,0 +1,81 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.nameshop {
+    font-size: 40px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    -moz-user-select: -moz-none;
+    -o-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    text-align: start;
+}
+
+/* @keyframes move {
+    0% {
+        color: black;
+    }
+
+    10% {
+        color: #9500ba;
+    }
+
+    20% {
+        color: #5006b8;
+    }
+
+    30% {
+        color: #0656b8;
+    }
+
+    40% {
+        color: #06b8af;
+    }
+
+    50% {
+        color: #0dbd56;
+    }
+
+    60% {
+        color: #ccdb2a;
+    }
+
+    70% {
+        color: #cc8f14;
+    }
+
+    80% {
+        color: #d91b0d;
+    }
+
+    90% {
+        color: #73150e;
+    }
+
+    100% {
+        color: #360909;
+    }
+} */
+
+.menu {
+    white-space: nowrap; /* Запобігає перенесенню елементів на новий рядок */
+    display: flex; /* Встановлює контейнер div як flex-контейнер */
+    align-items: center; /* Вирівнює елементи по вертикалі */
+  }
+  
+  .nameshop {
+    margin-left: 10px; /* Додатковий відступ між елементами (необов'язково) */
+  }
+  
+  .green {
+    margin-right: 10px; /* Додатковий відступ між елементами (необов'язково) */
+    margin-bottom: 22px;
+  }
+  
+  .search {
+    margin-left: auto; /* Притискає елементи до правого краю */
+  
+  }
